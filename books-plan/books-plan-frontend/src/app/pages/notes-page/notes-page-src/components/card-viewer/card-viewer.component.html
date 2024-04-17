@@ -1,0 +1,50 @@
+<form [formGroup]="notesPageService.cardEitorForm" >
+ <div class="modal-header" [style]="'background-color: ' + notesPageService.cardEitorForm.value.colorValue">
+   <input
+     class="form-control border-0 rounded-0 fw-bold fs-4"
+     type="text"
+     placeholder="Книга..."
+     formControlName="header"
+   />
+ </div>
+<div class="modal-body">
+  <div class="">
+    <app-card-editor></app-card-editor>
+  </div>
+  <div class="modal-footer border-0 justify-content-between">
+    <div class="color-label">
+    <select
+      class="form-select"
+      formControlName="colorValue"
+      id="styleLabel"
+    >
+      <option
+        *ngFor="let color of notesPageService.colors; let i = index"
+        [value]="color.value"
+      >
+        {{ color.name }}
+      </option>
+    </select>
+    </div>
+
+    <div>
+      <button
+        type="button"
+        class="btn"
+        (click)="activeModal.dismiss('Cross click')"
+      >
+        Отмена
+      </button>
+      <button
+        type="button"
+        class="btn btn-outline-primary"
+        (click)="activeModal.close(getActiveType())"
+        [disabled]="notesPageService.cardEitorForm.invalid"
+      >
+        {{ getActiveTypeButtonName()}}
+      </button>
+    </div>
+  </div>
+</div>
+</form>
+

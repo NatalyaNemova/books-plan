@@ -1,0 +1,13 @@
+<div class="container">
+<div class="row">
+  <app-note-card
+    class="note-card rounded col-6 col-sm-4 col-md-3"
+    *ngFor=" let book of notesPageService.books | filterBooks : notesPageService.search"
+    [header]="book.header!"
+    [priorityText]="book.priority?.desc!"
+    [color]="book.color"
+    [id]="book.id!"
+    [author]="book.author!"
+  ></app-note-card>
+  </div>
+</div>

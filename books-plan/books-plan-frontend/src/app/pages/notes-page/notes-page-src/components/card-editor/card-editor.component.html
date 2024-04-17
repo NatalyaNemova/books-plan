@@ -1,0 +1,50 @@
+<form class="editor-wrapper" [formGroup]="contentForm">
+
+  <div class="input-group mb-3">
+    <span for="headerLabel" class="input-group-text">Автор (ФИО)</span>
+    <input formControlName="author" type="text" class="form-control" id="headerLabel">
+
+  </div>
+
+  <div class="input-group mb-3">
+    <span for="priorityLabel" class="input-group-text">Статус</span>
+
+    <select
+      class="form-select"
+      formControlName="priorityId"
+      id="priorityLabel"
+    >
+      <option
+        *ngFor="let priority of notesPageService.priorites; let i = index"
+        [value]="priority.id"
+      >
+        {{ priority.desc }}
+      </option>
+    </select>
+  </div>
+
+
+  <div class="input-group mb-3">
+    <span for="styleLabel" class="input-group-text">Жанр</span>
+
+    <select
+    class="form-select"
+    formControlName="styleId"
+    id="styleLabel"
+  >
+    <option
+      *ngFor="let style of notesPageService.styles; let i = index"
+      [value]="style.id"
+    >
+      {{ style.name }}
+    </option>
+  </select>
+  </div>
+
+
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Комментарий</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" formControlName="noteText"></textarea>
+  </div>
+
+</form>

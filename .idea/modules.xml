@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/books-plan/books-plan.iml" filepath="$PROJECT_DIR$/books-plan/books-plan.iml" />
+      <module fileurl="file://$PROJECT_DIR$/books-plan/books-plan-backend/books-plan-backend.iml" filepath="$PROJECT_DIR$/books-plan/books-plan-backend/books-plan-backend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/books-plan/books-plan-frontend/books-plan-frontend.iml" filepath="$PROJECT_DIR$/books-plan/books-plan-frontend/books-plan-frontend.iml" />
+    </modules>
+  </component>
+</project>

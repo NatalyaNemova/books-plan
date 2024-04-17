@@ -1,0 +1,17 @@
+<div class="border-1 border-bottom bg-primary-subtle shadow-sm">
+  <div class="container">
+    <header class="d-flex justify-content-between py-3">
+
+      <input
+        class="clear form-control w-50"
+        type="search"
+        placeholder="Поиск по книгам"
+        aria-label="Search"
+        [(ngModel)]="searchService.search"
+      />
+
+
+      <button class="btn btn-primary" (click)="notesPageService.openNoteCardModal(null)">Добавить книгу</button>
+    </header>
+  </div>
+</div>

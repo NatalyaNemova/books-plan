@@ -1,0 +1,20 @@
+<button class="note-card w-100" (click)="notesPageService.openNoteCardModal(id)">
+  <div class="card text-start" >
+    <div class="card-body rounded-top-2 p-1" [style]="'background-color: ' + color!.value" >
+      <h3 class="card-title">{{ header }}</h3>
+      <p class=" fst-italic">{{ author }}</p>
+    </div>
+    <div class="card-footer text-muted clearfix text-start p-1">
+      <span class="">{{ priorityText }}</span>
+      <div ngbDropdown placement="top-end" class="d-inline-block float-end">
+        <button
+          appClickStopPropagation
+          (click)="notesPageService.delete(id)"
+          class="btn"
+        >
+          <i class="bi bi-trash text-danger"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</button>
